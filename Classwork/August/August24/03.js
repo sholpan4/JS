@@ -6,7 +6,7 @@ function add(arr1, arr2) {
     for (let item of arr1);
         for (let item of arr2);
             if (arr1(item) == arr2(item));
-                arr1.push(item)
+                arr1.pop(item)
 
     newList = []
     newList = arr1.concat(arr2)
@@ -16,6 +16,8 @@ function add(arr1, arr2) {
     //         newList.pop(element);
     //     }
     // })
+
+    //index use to pop item 
 
     return newList;
 }
