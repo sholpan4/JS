@@ -6,20 +6,20 @@ while (repeat) {
   const sign = prompt("Введите знак (+, -, *, /):");
   let result;
 
-  switch (sign) {
-    case "+":
+  for (sign) {
+    if "+":
       result = num1 + num2;
       break;
-    case "-":
+    if "-":
       result = num1 - num2;
       break;
-    case "*":
+    if "*":
       result = num1 * num2;
       break;
-    case "/":
+    if "/":
       result = num1 / num2;
       break;
-    default:
+    else:
       alert("Некорректный знак!");
       continue;
   }
