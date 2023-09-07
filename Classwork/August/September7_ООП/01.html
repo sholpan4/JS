@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script lang="js">
+        // let user = {
+        //     id: "x0001",
+        //     name: "Chingis",
+        //     age: 25,
+        //     working: true,
+        //     bodyDetails: {
+        //         weight: 65,
+        //         height: 175,
+        //     },
+        //     married: null, 
+        //     requisites: [
+        //         {
+        //             id: 1,
+        //             bankName: "Kaspi Bank",
+        //             value: "KZ2313645687"
+        //         },
+        //         {
+        //             id: 2,
+        //             bankName: "Halyk Bank",
+        //             value: "KZ2313645687"
+        //         },
+        //         {
+        //             id: 3,
+        //             bankName: "HomeCredit Bank",
+        //             value: "KZ2313645687"
+        //         },
+        //     ],
+
+        //     count(num) {
+        //         return num * 100
+        //     }
+        // }
+
+        // console.log({user})
+        // console.log(user.count(555))
+
+        class User {
+            name = "Alex"
+            id = 1
+            generateUniCode(number){
+                return Math.random(1, 111);
+            
+            }
+        }
+
+        let user1 = new User()
+        console.log({user1})
+        console.log(user1.generateUniCode(26))
+
+    </script>
+
+    <!-- <script src="01.js"></script> -->
+</body>
+</html>
