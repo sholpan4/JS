@@ -14,8 +14,6 @@ function getIndexOfSymbol(str) {
                 console.log("index: " + i + " element: " + str[i]);
                 console.log(strCounter)
 
-
-
             }
             
         }
