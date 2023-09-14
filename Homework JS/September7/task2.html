@@ -7,6 +7,67 @@
     <title>task2</title>
 </head>
 <body>
-    <script src="task2.js"></script>
+    <script lang="js">
+        class HtmlElement {
+            tagName = "";
+            ownClosed = true;
+            text = "";
+            attrs = [];
+            styles = [];
+            subTags = [];
+            
+
+            createElement(tag, condition) {
+               return condition ? `<${tag}></${tag}>\n` : `<${tag}/>\n` // if true else false `<${this.tagName}></${this.tagName}>` : `<${this.tagName}/>`
+            }
+
+            setsStyle() {
+                
+            }
+
+            setAttr() {
+
+            }
+
+            createHtml(){
+                this.subTags.forEach((tag)=>{
+                    const subTag = this.createElement(tag.subTagName, tag.ownClosed)
+                    return
+                })
+            }
+
+            getHtml() {
+                return this.createHtml()
+            }
+
+        }
+
+        const html1 = new HtmlElement();
+        html1.getName = "div";
+        html1.ownClosed = true;
+        html1.text = "Attention";
+        html1.attrs = ['style', 'src', 'arg', 'target', 'href'];
+        // html1.styles = [
+        //     {selector: 'margin', value: "10px"},
+        //     {selector: 'color', value: "green"},
+        //     {selector: 'margin', value: "10px"},
+        //     {selector: 'text=align', value: "justify"},
+        // ];
+        html1.subTags = [
+            {subTagName: 'h3', ownClosed: true},
+            {subTagName: 'img', ownClosed: false},
+            {subTagName: 'p', ownClosed: true}
+            ];
+
+        html1.createElement()
+        console.log(html1)
+
+        // html1.getHtml();
+
+
+
+    </script>
+
+    <div></div>
 </body>
 </html>

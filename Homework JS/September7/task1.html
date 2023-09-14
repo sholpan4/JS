@@ -8,8 +8,45 @@
 </head>
 <body>
     <script lang="js">
-        class 
+        class Circle {
+            radius = null;
 
+            getRadius() {
+                return this.radius;
+            }
+
+            setRadius(value) {
+                this.radius = value;
+            }
+
+            getDiameter() {
+                return this.radius * 2;
+            }
+
+            getAreaOfCircle() {
+                return Math.PI * Math.pow(this.radius, 2); //pi * R square
+            }
+
+            getLenghtOfCircle() {
+                return 2 * Math.PI * this.radius; // dlina
+            }
+
+        }
+
+       
+        const circleExample = new Circle();
+        circleExample.setRadius(2);
+        circleExample.getRadius();
+        circleExample.getDiameter();
+        circleExample.getAreaOfCircle();
+        circleExample.getLenghtOfCircle();
+
+       
+
+        console.log('Radius = ' + circleExample.getRadius())
+        console.log('Diametr = ' + circleExample.getDiameter())
+        console.log('Area = ' + circleExample.getAreaOfCircle())
+        console.log('Lenght = ' + circleExample.getLenghtOfCircle())
 
     </script>
 </body>
