@@ -3,6 +3,7 @@
       "name": "Alice",
       "country": "Austria",
       "tasks": ["develop", "design", "test"],
-      "age": 30
+      "age": 30,
+      "info": "hello"
     }
   }

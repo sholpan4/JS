@@ -1,0 +1,21 @@
+.cont {
+    height: 100px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    background-color: grey;
+    
+}
+
+.btn {
+    height: 50px;
+    width: 100px;
+    border: 2px solid rgb(134, 197, 226);
+    background-color: rgb(134, 197, 226);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.count {
+    color: red;
+}

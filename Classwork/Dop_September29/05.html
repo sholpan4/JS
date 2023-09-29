@@ -4,20 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="05.css"/> 
     <title>Document</title>
 </head>
 <body>
-    <script>
-        import info from `./test.json` assert { type: `json` };
-
-
-        const { default: info } = await import("./test.json", {
-            assert: {
-                type: "json",
-            },
-        });
-    </script>
+    <div class="cont">
+        <button class="btn">Like</button>
+        <span class="count">0</span>  
+    </div>
     
 
+    <script src="05.js"></script>
+    
 </body>
 </html>
