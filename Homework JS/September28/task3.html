@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>task3</title>
+    <style>
+        body {
+            background: url(football.jpg) no-repeat;
+            background-size: 100%;
+        }
+        img {
+            /* position: absolute; */
+            background-color: inherit;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
-    
-    <script></script>
+    <div id="ball" style="position: absolute;"><img src="ball.jpg"></div>
+    <script>
+        document.body.onclick = function moveBall(event) {
+            let x = event.clientX,
+                y = event.clientY;
+
+            ball.style.left = x + "px";
+            ball.style.top = y + "px";
+        }
+    </script>
 </body>
 </html>

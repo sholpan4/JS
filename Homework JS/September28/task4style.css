@@ -1,0 +1,32 @@
+.svet {
+  width: 500px;
+  height: 140px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+
+}
+
+
+.light {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: grey;
+}
+
+.light.red {
+  background-color: red;
+}
+
+.light.yellow {
+  background-color: yellow;
+}
+
+.light.green {
+  background-color: green;
+}
