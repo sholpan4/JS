@@ -24,29 +24,88 @@
             }
 
             getAreaOfCircle() {
-                return Math.PI * Math.pow(this.radius, 2); //pi * R square
+                return Math.PI * Math.pow(this.radius, 2); // число Пи * R^2 Метод для вычисления
+                                                            // площади окружности
             }
 
-            getLenghtOfCircle() {
-                return 2 * Math.PI * this.radius; // dlina
+            getLengthOfCircle() {
+                return 2 * Math.PI * this.radius; // Метод для вычисления длины окружности
             }
 
-        }
+            }
 
-       
-        const circleExample = new Circle();
-        circleExample.setRadius(2);
-        circleExample.getRadius();
-        circleExample.getDiameter();
-        circleExample.getAreaOfCircle();
-        circleExample.getLenghtOfCircle();
+            const circleExample1 = new Circle();
+            circleExample1.setRadius(2);
+            circleExample1.getRadius();
+            circleExample1.getDiameter();
+            circleExample1.getAreaOfCircle();
+            circleExample1.getLengthOfCircle();
 
-       
+            // console.log("Radius = " + circleExample1.getRadius());
+            // console.log("Diameter = " + circleExample1.getDiameter());
+            // console.log("Area of circle = " + circleExample1.getAreaOfCircle());
+            // console.log("Length of circle = " + circleExample1.getLengthOfCircle());
 
-        console.log('Radius = ' + circleExample.getRadius())
-        console.log('Diametr = ' + circleExample.getDiameter())
-        console.log('Area = ' + circleExample.getAreaOfCircle())
-        console.log('Lenght = ' + circleExample.getLenghtOfCircle())
+            let text;
+            class HtmlElement {
+            constructor() {
+            }
+
+            tagName;
+            ownClosed;
+            text = "";
+            attrs = [];
+            styles = [];
+            subTags = [];
+
+
+            createElement(tag, condition) {
+                return condition ? `<${tag}></${tag}>\n` : `<${tag}/>\n`; // ES6
+            }
+
+            setStyle() {
+
+            }
+
+            setAttr() {
+
+            }
+
+            createHtml() {
+                this.subTags.forEach((tag) => {
+                const subTags = this.createElement(tag.subTagName, tag.ownClosed);
+                })
+            }
+
+            // getHtml() {
+            //   return this.createElement();
+            // }
+            }
+            let el = document.createElement('div')
+
+            const html1 = new HtmlElement();
+            html1.tagName = "div";
+            html1.ownClosed = true;
+            html1.text = "Обратите внимание.";
+            html1.attrs = ['style', 'src', 'alt', 'target', 'href'];
+
+            html1.styles = [
+            {selector: 'margin', value: "10px"},
+            {selector: 'color', value: "green"},
+            {selector: 'width', value: "100%"},
+            {selector: 'text-align', value: "justify"},
+            ];
+
+            html1.subTags = [
+            { subTagName: 'h3', ownClosed: true },
+            { subTagName: 'img', ownClosed: false },
+            { subTagName: 'p', ownClosed: true }
+            ];
+
+            html1.createElement();
+            console.log(html1.createHtml())
+
+            // html1.getHtml();
 
     </script>
 </body>
