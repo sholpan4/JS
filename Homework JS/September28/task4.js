@@ -1,17 +1,19 @@
-const circles = document.querySelectorAll(".lights");
-console.log(light)
-
-let activeLight = 0
-
-function changeLight() {
-    light[activeLight].className = "light";
-    activeLight++;
-    
-    if(activeLight > 2) {
-        activeLight = 0;
-        
+const trafficLights = document.querySelector("div.traffic__light");
+  
+const redlight = document.getElementById("red");
+const yellowlight = document.getElementById("yellow");
+const greenlight = document.getElementById("green");
+const butn = document.getElementById("btn");
+  
+butn.addEventListener("click", function() {
+    if (redlight.classList.contains("traffic__red")) {
+        redlight.classList.remove("traffic__red");
+        yellowlight.classList.add("traffic__yellow");
+    } else if (yellowlight.classList.contains("traffic__yellow")) {
+        yellowlight.classList.remove("traffic__yellow");
+        greenlight.classList.add("traffic__green");
+    } else if (greenlight.classList.contains("traffic__green")) {
+        greenlight.classList.remove("traffic__green");
+        redlight.classList.add("traffic__red");
     }
-
-    const currentLight = light[activeLight];
-    currentLight.className.add(currentLight.getAttribute("color"))
-}
+});
