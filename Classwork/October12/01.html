@@ -45,26 +45,20 @@
                 <br />
                 <label><input type="checkbox" />Remember me</label>
                 <br />
-            <button>Sign In</button>
+            <button type="button" onclick="sendData()">Sign In</button>
         </form>
     </div>
     
   	<script>
-        const btn = document.querySelector('button'),
-            login = document.querySelector('input'),
-            chbx = document.querySelector('[type="checkbox"]');
-            
-        login.addEventListener('change', function(){this.value = this.value.trim();});
+        let 
+
+            function sendData() {
+                let letter = check.checked ? `запомнил` : ` не запомнил`;
+                return alert(`Привет, ${login?.value}. Я тебя ${letter}`)
+            }
+
         
-        btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const val = login.value;
-        if( !val.length ){login.focus();}
-        else{
-        document.querySelector('h1')?.remove();
-        document.body.insertAdjacentHTML('afterbegin', `<h1>Привет, <span>${val}</span>! Я тебя ${!chbx.checked ? 'не' : ''} запомнил</h1>` );
-        }
-        });
+        
 	</script>
 </body>
 </html>
