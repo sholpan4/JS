@@ -6,26 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-    <form id="SignUp" action="/apply/" method="POST">
+    <form id="UserInfo" action="/apply/" method="POST">
         <label>
-          Your login:
-          <input type="text" name="name" id="name" placeholder="Илон Маск" required autofocus>
-        </label>
-      
-        <label>
-          Your e-mail:
-          <input type="email" name="email" id="email" placeholder="elon@musk.com" required>
-        </label>
-      
-        <label>
-          Password:
-          <input type="password" name="password" id="password" placeholder="Password">
+            Firstname:
+            <input type="text" name="firstname" id="firstname" autofocus>
         </label>
 
         <label>
-            Repeat password:
-            <input type="password" name="password" id="password" placeholder="Password">
-          </label>
+            Lastname:
+            <input type="text" name="lastname" id="lastname" autofocus>
+        </label>
+
+        <label>
+            Birthday:
+            <input type="date" name="birthday" id="birthday" placeholder="dd/mm/yyyy" autofocus>
+        </label>
+
+        <label>
+            Gender:
+            <input type="checkbox" />Male
+            <input type="checkbox" />Female
+        </label>
+        
+
       
         <button type="submit">Sign Up</button>
       </form>
