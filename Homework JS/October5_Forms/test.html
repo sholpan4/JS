@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="userInfoForm">
+        <label for="firstname">Firstname:</label>
+        <input type="text" id="firstname" required><br>
+        <label for="lastname">Lastname:</label>
+        <input type="text" id="lastname" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br>
+        <input type="submit" value="Save">
+    </form>
+    
+    <h2>Result:</h2>
+    <p id="displayInfo"></p>
+    <script>
+        const userInfoForm = document.getElementById("userInfoForm");
+        const displayInfo = document.getElementById("dislpayInfo");
+            
+        userInfoForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const firstname = document.getElementById("firstname").value;
+            const lastname = document.getElementById("lastname").value;
+            const birthday = document.getElementById("email").value;
+
+
+            displayInfo.innerHTML = `
+                <strong>Firstname:</strong> ${firstname}<br>
+                <strong>Lastname:</strong> ${lastname}<br>
+                <strong>Birthday:</strong> ${email}<br>
+
+            `;
+        })
+    </script>   
+
+</body>
+</html>
