@@ -37,3 +37,34 @@ body {
 .nav-link {
     font-size: 20px;
 }
+
+.visitor {
+    justify-content: space-between;
+    color: rgb(97, 199, 165);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* .sort_search {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: auto;
+}
+
+.sort {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: auto;
+} */
+/* 
+.search {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: auto;
+} */
