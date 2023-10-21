@@ -1,9 +1,9 @@
-var num1 = prompt("Enter number: ");
-
-function getDigitAmount(n){
-    var a = 0
-    while (a < n.lenght) c++;
-    return c;
+let number = prompt("Введите число для рачета его делителей");
+let str='';
+for (let n = 1; n <= number; n++){
+    let a = number % n
+    if(a==0){
+    str += n + ', '
+    }
 }
-
-alert(getDigitAmount(num1))
+alert(str)

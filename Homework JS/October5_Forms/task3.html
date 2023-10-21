@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+                height: 300px;
+                width: 300px;
+                border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="userInfoForm" action="/apply/" method="POST">
+            <label>
+                Firstname:
+                <input type="text" name="firstname" id="firstname" autofocus>
+            </label>
+
+            <label>
+                Lastname:
+                <input type="text" name="lastname" id="lastname" autofocus>
+            </label>
+
+            <label>
+                Birthday:
+                <input type="date" name="birthday" id="birthday" placeholder="dd/mm/yyyy" autofocus>
+            </label>
+
+            <label>
+                Gender:
+                <input type="radio" id="gender" />Male
+                <input type="radio" id="gender "/>Female
+            </label>
+            
+            <label>
+                Country:
+                <select id="country">
+                    <option name="country" id="country" value="USA">USA</option>
+                    <option name="country" id="country" value="UK">UK</option>
+                    <option name="country" id="country" value="France">France</option>
+                </select>
+            </label>
+
+            <label>
+                City:
+                <select id="city">
+                    <option name="city" id="city" value="Washington">Washington</option>
+                    <option name="city" id="city" value="London">London</option>
+                    <option name="city" id="city" value="Paris">Paris</option>
+                </select>
+            </label>
+
+            <label>
+                Skills:
+                <input type="checkbox" id="skills"/>HTML
+                <input type="checkbox" id="skills"/>CSS
+                <input type="checkbox" id="skills"/>JS
+                <input type="checkbox" id="skills"/>PHP
+                <input type="checkbox" id="skills"/>C++
+                <input type="checkbox" id="skills"/>JAVA
+                <input type="checkbox" id="skills"/>C#    
+            </label>
+        
+            <input type="submit" value="Save">
+        </form>
+
+        <h2>Result:</h2>
+        <p id="displayInfo"></p>
+        <script>
+            const userInfoForm = document.getElementById("userInfoForm");
+            const displayInfo = document.getElementById("dislpayInfo");
+            
+            userInfoForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const firstname = document.getElementById("firstname").value;
+                const lastname = document.getElementById("lastname").value;
+                const birthday = document.getElementById("birthday").value;
+                const gender = document.getElementById("gender").value;
+                const country = document.getElementById("country").value;
+                const city = document.getElementById("city").value;
+                const skills = document.getElementById("skills").value;
+
+                displayInfo.innerHTML = `
+                    <strong>Firstname:</strong> ${firstname}<br>
+                    <strong>Lastname:</strong> ${lastname}<br>
+                    <strong>Birthday:</strong> ${birthday}<br>
+                    <storng>Gender:</strong> ${gender}<br>
+                    <strong>Country:</strong> ${country}<br>
+                    <strong>City:</strong> ${city}<br>
+                    <strong>Skills:</strong> ${skills}
+                `;
+            });
+
+            // не могу вывести заполненную форму, подскажите как)
+        </script>
+    </div>
+</body>
+</html>

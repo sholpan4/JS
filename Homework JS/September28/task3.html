@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+    <style>
+        body {
+            background: url(pole.jpg) no-repeat;
+            background-size: 100%;
+            position: relative;
+            cursor: pointer;
+        }
+        img {
+            background-color: inherit;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: all 1s;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="body">
+        <img src="ball.jpg" id="ball">
+    </div>
+
+    <script>
+            body.onclick = function(event) {
+                let bodyCoords = this.getBoundingClientRect();
+                
+                let ballCoords = {
+                    top: event.clientY - bodyCoords.top - body.clientTop - ball.clientHeight / 2,
+                    left: event.clientX - bodyCoords.left - body.clientLeft - ball.clientWidth / 2
+                };
+
+                if (ballCoords.top < 0) ballCoords.top = 0;
+                if (ballCoords.left < 0) ballCoords.left = 0;
+
+                if (ballCoords.left + ball.clientWidth > body.clientWidth) {
+                    ballCoords.left = body.clientWidth - ball.clientWidth;
+                }
+
+                if (ballCoords.top + ball.clientHeight > body.clientHeight) {
+                    ballCoords.top = body.clientHeight - ball.clientHeight;
+                }
+
+                ball.style.left = ballCoords.left + 'px';
+                ball.style.top = ballCoords.top + 'px';
+            }
+
+
+        // document.body.onclick = function moveBall(event) {
+        //     let x = event.clientX,
+        //         y = event.clientY;
+
+        //     ball.style.left = x + "px";
+        //     ball.style.top = y + "px";
+        // }
+    </script>
+</body>
+</html>

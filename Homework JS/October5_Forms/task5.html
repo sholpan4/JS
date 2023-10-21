@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task5</title>
+</head>
+<body>
+    <h1>All questions:</h1>
+    <form id="testForm">
+        <label for="question">Question:</label>
+        <input type="text" id="question" required>
+
+        <label for="correctAnswer">Correct Answer:</label>
+        <input type="text" id="correctAnswer" required>
+
+        <label for="wrongAnswer">Wrong Answer</label>
+        <input type="text" id="wrongAnswer" required>
+
+        <input type="submit" value="Add Question">
+    </form>
+
+    <h2>List of questions:</h2>
+    <ui id="questionList"></ui>
+
+    <script>
+        const testForm = document.getElementById("testForm");
+        const questionList = document.getElementById("questionList");
+
+        testForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const question = document.getElementById("question").value;
+            const correctAnswer = document.getElementById("correctAnswer").value;
+            const wrongAnswer = document.getElementById("wrongAnswer").value;
+            const questionItem = document.createElement("li");
+            questionItem.innerHTML = ` <strong>Question:</strong> ${question}<br>
+                                        <strong>Correct Answer:</strong> ${correctAnswer}<br>
+                                        <strong>Wrong Answer:</strong> ${wrongAnswer}`;
+            questionList.appendChild(questionItem);
+            document.getElementById("question").value = "";
+            document.getElementById("correctAnswer").value = "";
+            document.getElementById("wrongAnswer").value = "";
+        });
+    </script>
+</body>
+</html>

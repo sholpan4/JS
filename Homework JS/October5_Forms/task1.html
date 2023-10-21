@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+</head>
+<style>
+    h1{
+	    text-align: center;
+	}
+	h1 span{
+	    color: crimson;
+	}
+	label, button{
+	    cursor: pointer;
+	    font-weight: bold;
+	}
+	label:hover{
+	    color: blue;
+	}
+	button:hover{
+	    color: crimson;
+	}
+	input{
+	    margin: 3px 10px 3px 3px;
+	}
+    div{
+        height: 300px;
+        width: 300px;
+        border: 2px solid white;
+        background-color: antiquewhite;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+    
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <label><input type="text" name="login" id="login" />Your login</label>
+            <label><input type="password" name="password" id="password" />Your password</label>
+                <br />
+                <label><input type="checkbox" />Remember me</label>
+                <br />
+            <button>Sign In</button>
+        </form>
+    </div>
+    
+  	<script>
+        const btn = document.querySelector('button'),
+            login = document.querySelector('input'),
+            chbx = document.querySelector('[type="checkbox"]');
+            
+        login.addEventListener('change', function(){this.value = this.value.trim();});
+        
+        btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const val = login.value;
+        if( !val.length ){login.focus();}
+        else{
+        document.querySelector('h1')?.remove();
+        document.body.insertAdjacentHTML('afterbegin', `<h1>Привет, <span>${val}</span>! Я тебя ${!chbx.checked ? 'не' : ''} запомнил</h1>` );
+        }
+        });
+	</script>
+</body>
+</html>

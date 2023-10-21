@@ -11,5 +11,5 @@ while (a!=b) {
   }
 }
 gcd = a;
-// document.write(gcd);
+
 alert(gcd)

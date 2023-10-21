@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        h1 span{
+            color: crimson;
+        }
+        label, button{
+            cursor: pointer;
+            font-weight: bold;
+        }
+        label:hover{
+            color: blue;
+        }
+        button:hover{
+            color: crimson;
+        }
+        input{
+            margin: 3px 10px 3px 3px;
+        }
+        div{
+            height: auto;
+            width: 600px;
+            border: 2px solid white;
+            background-color: antiquewhite;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            align-items: center;
+        }
+        button{
+            width: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+        }
+        
+        </style>
+</head>
+<body>
+    <div>
+        <form id="signUpForm" action="/apply/" method="POST">
+            <label>
+                Your login:
+                <input type="text" name="name" id="name" placeholder="Илон Маск" required autofocus>
+            </label>
+          
+            <label>
+                Your e-mail:
+                <input type="email" name="email" id="email" placeholder="elon@musk.com" required>
+            </label>
+            </br>
+            <label>
+                Password:
+                <input type="password" name="password" id="password" placeholder="Password">
+            </label>
+    
+            <label>
+                Repeat password:
+                <input type="password" name="password" id="password" placeholder="Password">
+            </label>
+            </br>
+            <input type="submit" value="Sign Up">
+          </form>
+    </div>
+
+    <p id="confirmationMessage"></p>
+    <script>
+        const signUpForm = document.getElementById("signUpForm");
+        const confirmationMessage = document.getElementById("confirmationMessage");
+        
+        signUpForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const email = document.getElementById("email").value;
+            confirmationMessage.textContent = `На почту ${email} отправлено письмо с подтверждением.`;
+        })
+    </script>
+    
+</body>
+</html>
