@@ -27,11 +27,11 @@ body {
 }
 
 .nav-item:hover {
-    border-bottom: 3px solid rgb(30, 247, 30);
+    border-bottom: 2px solid rgb(30, 247, 30);
 }
 
 .nav-item:active {
-    border-bottom: 3px solid rgb(30, 247, 30);
+    border-bottom: 2px solid rgb(30, 247, 30);
 }
 
 .nav-link {
