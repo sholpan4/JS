@@ -34,3 +34,58 @@ ul {
 .menu-item:hover { 
     border-bottom: 3px solid #009595;
 }
+
+.new-visitor{
+    margin-top: 20px;
+    float: right;
+
+}
+
+.visitors {
+    height: 80px;
+    border-bottom: 1px solid #595959;
+}
+
+.buttonSort {
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.buttonSearch {
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.selectOpt {
+    width: 120px;
+}
+
+.sort_search{
+    margin-top: 10px;
+    padding-bottom: 60px;
+}
+
+.search{
+    float: right;
+    margin-top: 20px;
+}
+
+.sort {
+    float: left;
+    margin-top: 20px;
+}
+
+.SearchA{
+    width: 120px;
+    height: 30px;
+}
+
+.mt10{
+    margin-top: 10px;
+}
+
+.img{
+    cursor: pointer;
+}
