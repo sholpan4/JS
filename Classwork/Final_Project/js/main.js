@@ -25,7 +25,7 @@ window.onload = () => {
         //newRow.insertCell(0).innerHTML = <th scope="row">${id}</th> 
         newRow.insertCell(1).innerHTML = fullName;  
         newRow.insertCell(2).innerHTML = phoneNumber;  
-        newRow.insertCell(3).innerHTML = '<td><img id="PenImg" class="img" data-bs-toggle="modal" data-bs-target="#exampleModalCenter" src="images/icons8-pen-64.png" width="20"></td>' 
+        
          
         // Clear input fields  
         clearInputs();  
