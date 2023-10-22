@@ -1,29 +1,21 @@
-// window.onload = () => {
-//     let books = [
-//         {
-//             id: 0,
+window.onload = () => {
+    const editModal = document.getElementById('edit-modal');
+    const add = document.querySelector('.add');
+    const closeModal = document.querySelector('.close-btn');
 
-//         },
-//     ]
-
-//     localStorage.setItem("books", JSON.stringify(books));
-//     console.log(localStorage.getItem('books'));
-// }
-
-// const editModal = document.getElementById('edit-modal');
-// const add = document.querySelector('add')
+    const fullName = document.querySelector('#full-name');
+    const phoneNumber = document.querySelector('#phone-number');
 
 
+    addNewVisitor() {
+        validateVisitorData();
 
+    }
 
+    validateVisitorData() {
+        if (fullName === '' || phoneNumber === '') return alert('Please fill in the blank');
 
+    }
 
-
-
-
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
-
-myModal.addEventListener('shown.bs.modal', () => {
-    myInput.focus()
-})
+    addEventListener
+}
