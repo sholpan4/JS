@@ -44,10 +44,10 @@
         <div>
             <div class="visitor d-flex px-4">
                 <div class="col-4 row gx-5 p-3">
-                    <div>All Visitors</div>
+                    <div>All Cards</div>
                 </div>
                 <div class="col-2 p-3">
-                    <button class="btn btn-outline-primary" type="button">New visitor</button>
+                    <button class="btn btn-outline-primary" type="button">New card</button>
                 </div>
                 
               </div>
@@ -63,8 +63,10 @@
                         <select class="form-select col-2" id="inputGroupSelect04" aria-label="Example select with button addon">
                             <option selected>Choose...</option>
                             <option value="1">ID</option>
-                            <option value="2">Name</option>
-                            <option value="3">Phone</option>
+                            <option value="2">Visitor</option>
+                            <option value="3">Book</option>
+                            <option value="4">Borrow Date</option>
+                            <option value="5">Return Date</option>
                         </select>
                     </div>
                    
@@ -90,36 +92,40 @@
                 <thead>
                   <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col">Edit</th>
+                    <th scope="col">Visitor</th>
+                    <th scope="col">Book</th>
+                    <th scope="col">Borrow Date</th>
+                    <th scope="col">Return Date</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
                     <td>Colette Kelley</td>
-                    <td>012 435 45 67</td>
-                    <td><div><button class="editBtn"></button></div></td>
-                    <!-- <td><div><a href="img/123.png"></a></div></td> -->
+                    <td>JS Part 1</td>
+                    <td>12.01.2019</td>
+                    <td>12.03.2019</td>
                   </tr>
                   <tr>
                     <th scope="row">2</th>
                     <td>Ruby-Rose Lennon</td>
-                    <td>012 647 34 24</td>
-                    <td><div><button class="editBtn"></button></div></td>
+                    <td>JS Part 2</td>
+                    <td>12.01.2019</td>
+                    <td>12.03.2019</td>
                   </tr>
                   <tr>
                     <th scope="row">3</th>
                     <td>Leanne Gibbons</td>
-                    <td>012 879 78 45</td>
-                    <td><div><button class="editBtn"></button></div></td>
+                    <td>HTML+CSS book/td>
+                    <td>12.01.2019</td>
+                    <td><img src="img/return.png" width="20px"></td>
                   </tr>
                   <tr>
                     <th scope="row">2</th>
                     <td>Rumaisa Reel</td>
-                    <td>012 645 64 67</td>
-                    <td><div><button class="editBtn"></button></div></td>
+                    <td>Bootstrap</td>
+                    <td>12.01.2019</td>
+                    <td><img src="img/return.png" width="20px"></td>
                   </tr>
                 </tbody>
               </table>
